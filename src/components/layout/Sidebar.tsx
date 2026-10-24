@@ -13,6 +13,9 @@ import {
 import {
   Dashboard as DashboardIcon,
   AddCircleOutline as NewCampaignIcon,
+  PlayCircleOutline as LessonsIcon,
+  MovieCreationOutlined as GenerateLessonIcon,
+  LocalOffer as PricingIcon,
   Settings as SettingsIcon,
   ChevronLeft as CollapseIcon,
   ChevronRight as ExpandIcon,
@@ -38,6 +41,9 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { label: 'My Campaigns', icon: <DashboardIcon />, path: PATHS.DASHBOARD },
   { label: 'New Campaign', icon: <NewCampaignIcon />, path: PATHS.CAMPAIGNS_NEW },
+  { label: 'My Lessons', icon: <LessonsIcon />, path: PATHS.LESSONS },
+  { label: 'Generate Lesson', icon: <GenerateLessonIcon />, path: PATHS.LESSONS_NEW },
+  { label: 'Pricing', icon: <PricingIcon />, path: PATHS.BUNDLES },
 ];
 
 interface SidebarProps {
