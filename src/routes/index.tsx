@@ -17,6 +17,7 @@ import { GenerateLessonPage } from '@/pages/Generate/GenerateLessonPage';
 import { BundlesPage } from '@/pages/Bundles/BundlesPage';
 import { SettingsPage } from '@/pages/Settings/SettingsPage';
 import { NotFoundPage } from '@/pages/NotFound/NotFoundPage';
+import DeliveryPage from '@/pages/Delivery/DeliveryPage';
 
 export const router = createBrowserRouter([
   // Public landing / marketing page
@@ -121,6 +122,10 @@ export const router = createBrowserRouter([
   },
 
   // 404 page (no layout)
+  {
+    path: '/delivery/:id',
+    element: <DeliveryPage />,
+  },
   {
     path: PATHS.NOT_FOUND,
     element: <NotFoundPage />,
