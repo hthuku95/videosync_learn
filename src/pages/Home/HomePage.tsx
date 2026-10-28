@@ -70,7 +70,7 @@ export function HomePage() {
             </motion.div>
             <motion.div variants={rise} initial="hidden" animate="show" custom={2}>
               <Typography variant="h6" color="text.secondary" paragraph sx={{ lineHeight: 1.65, fontWeight: 400 }}>
-                VideoSync Learn turns any subject into AI-animated educational videos — math, science, finance, coding, language, history, and more. Each lesson combines Manim (equations, diagrams, code animations, data charts, LaTeX) with HyperFrames (kinetic typography, 3D scene graphs, VFX shaders, d3 charts, GSAP, Lottie, audio visualization) and narration, posted to your connected accounts.
+                VideoSync Learn turns any subject into AI-animated educational videos — math, science, finance, coding, language, history, and more. Each lesson is fully animated with equations, diagrams, code walkthroughs, data charts, motion graphics, VFX, 3D depth, and narration, posted to your connected accounts.
               </Typography>
             </motion.div>
             <motion.div variants={rise} initial="hidden" animate="show" custom={3}>
@@ -102,7 +102,7 @@ export function HomePage() {
           </Typography>
           <Box sx={{ display: 'grid', gap: 2.5, gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' } }}>
             {[
-              { Icon: BoltIcon, t: 'Any educational video', b: 'Math, science, finance, coding, language, history — any topic rendered as clean narrated explainers. Manim for equations and diagrams, HyperFrames for motion graphics, VFX, and 3D depth.' },
+              { Icon: BoltIcon, t: 'Any educational video', b: 'Math, science, finance, coding, language, history — any topic rendered as clean narrated explainers with equations, diagrams, motion graphics, VFX, and 3D depth.' },
               { Icon: LiveTvIcon, t: 'Daily curriculum', b: 'Lesson after lesson — a syllabus your channel publishes itself. Unlimited video types, narrated and animated.' },
             ].map((s) => (
               <Card key={s.t} sx={{ height: '100%' }}>

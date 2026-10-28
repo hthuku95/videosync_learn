@@ -15,7 +15,7 @@ export const BUNDLES: Bundle[] = [
     features: [
       '10 lesson videos generated from your topic',
       'Any educational video: math, science, coding, language, history, and more',
-      'Manim for equations/diagrams + HyperFrames for motion graphics, VFX, 3D',
+      'Equations, diagrams, motion graphics, VFX, and 3D — all in one lesson',
       'Narration-ready educational output',
       'Download & reuse in any LMS',
     ],
@@ -31,7 +31,7 @@ export const BUNDLES: Bundle[] = [
       'Up to 30 lesson videos generated',
       'Best value per lesson',
       'Any educational video: math, science, coding, language, history, and more',
-      'Manim for equations/diagrams + HyperFrames for motion graphics, VFX, 3D',
+      'Equations, diagrams, motion graphics, VFX, and 3D — all in one lesson',
       'Priority rendering queue',
       'Download & reuse in any LMS',
     ],

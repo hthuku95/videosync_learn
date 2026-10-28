@@ -36,7 +36,7 @@ export function TermsPage() {
   return (
     <LegalShell title="Terms of Service" updated="October 2026">
       <Section title="1. The service">
-        VideoSync Learn (“we”, “us”) provides AI-generated animated explainer lessons: daily Manim motion-graphics
+        VideoSync Learn (“we”, “us”) provides AI-generated animated explainer lessons: daily animated motion-graphics
         videos with narration and diagrams, and automatic posting to social
         accounts you connect. Output is AI-generated content based on your brief and source
         selection — creative direction remains yours, and you are responsible
