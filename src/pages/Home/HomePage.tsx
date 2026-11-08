@@ -151,6 +151,7 @@ export function HomePage() {
             One subscription covers both services and unlimited campaigns.
           </Typography>
           <PricingTiers
+            campaignsOff={campaignsOff}
             tiers={[
               { id: 'base', name: 'Starter', price: '$199', accounts: 20, blurb: 'For educators and course creators.', featured: true },
               { id: 'agency50', name: 'Agency 50', price: '$499', accounts: 50, blurb: 'For growing clip networks.' },
@@ -164,7 +165,10 @@ export function HomePage() {
             Questions
           </Typography>
           <Faq
-            items={[
+            items={campaignsOff ? [
+                { q: 'Do you offer monthly campaigns?', a: 'Monthly campaigns are coming soon — one-time bundles (10 videos for $50 or 30 for $100) are available today.' },
+                { q: 'How are bundles sold?', a: 'One-time: 10 videos for $50 or 30 for $100 — generated for your brand, downloadable forever.' },
+              ] : [
               { q: 'How many campaigns can I run?', a: 'As many as you want. Your subscription covers the app, not the campaign.' },
               { q: 'How many accounts can I connect?', a: '20 across YouTube, TikTok, Instagram, and Facebook on Starter. Agency tiers raise it to 50 or 150.' },
               { q: 'Is it really 5 posts a day?', a: 'Yes — up to 5 fresh renders daily, each published to all your selected accounts. A 4-account campaign publishes 20 posts from 5 renders.' },
