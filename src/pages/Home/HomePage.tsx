@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link as RouterLink, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { getFeatureFlags } from '@/services/features.service';
 import {
   Box, Container, Typography, Button, Card, CardContent, Chip, Divider,
 } from '@mui/material';
@@ -33,11 +34,16 @@ const rise = {
 
 export function HomePage() {
   const [params] = useSearchParams();
+  const [campaignsOff, setCampaignsOff] = useState(false);
 
   useEffect(() => {
     const ref = params.get('ref');
     if (ref) localStorage.setItem('vs_ref', ref);
   }, [params]);
+
+  useEffect(() => {
+    getFeatureFlags().then((f) => setCampaignsOff(!f.campaigns_enabled));
+  }, []);
 
   return (
     <>
@@ -85,7 +91,9 @@ export function HomePage() {
             </motion.div>
             <motion.div variants={rise} initial="hidden" animate="show" custom={4}>
               <Typography variant="body2" color="text.secondary" sx={{ mt: 2.5 }}>
-                $199 a month. Unlimited campaigns. Render once, publish everywhere.
+                {campaignsOff
+                  ? 'Monthly campaigns are coming soon. One-time bundles (10 videos for $50 or 30 for $100) are available now.'
+                  : '$199 a month. Unlimited campaigns. Render once, publish everywhere.'}
               </Typography>
             </motion.div>
           </Box>
@@ -173,7 +181,9 @@ export function HomePage() {
             Ready when your next lesson is due
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ mb: 2.5 }}>
-            Set up a campaign in minutes. Tomorrow's clips are already scheduled.
+            {campaignsOff
+              ? 'Monthly campaigns are coming soon. One-time lesson bundles (10 videos for $50 or 30 for $100) are available today.'
+              : "Set up a campaign in minutes. Tomorrow's clips are already scheduled."}
           </Typography>
           <Button variant="contained" size="large" component={RouterLink} to={PATHS.REGISTER}>
             Start learning
