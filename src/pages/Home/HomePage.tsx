@@ -17,6 +17,8 @@ import { Footer } from '@/components/common/Footer';
 import { PricingTiers } from '@/components/marketing/PricingTiers';
 import { HowItWorks } from '@/components/marketing/HowItWorks';
 import { Faq } from '@/components/marketing/Faq';
+import { HeroVideoBackground } from '@/components/marketing/HeroVideoBackground';
+import { ShowcaseWall } from '@/components/marketing/ShowcaseWall';
 
 /**
  * VideoSync Learn landing. Design: one orchestrated hero entrance; quiet,
@@ -47,6 +49,7 @@ export function HomePage() {
 
   return (
     <>
+      <HeroVideoBackground minHeight={480}>
       <Box
         sx={{
           background: (theme) =>
@@ -99,8 +102,17 @@ export function HomePage() {
           </Box>
         </Container>
       </Box>
+      </HeroVideoBackground>
 
       <Container maxWidth="lg">
+        {/* Showcase wall: real generated lesson clips as proof-of-work */}
+        <ShowcaseWall
+          title="Made with Education Video"
+          subtitle="Every clip below was generated end-to-end — topic research, script, narration, animation, render."
+          maxScenes={12}
+          ctaLabel="Make my lesson"
+        />
+
         <Box sx={{ mb: 8 }}>
           <Typography variant="h4" fontWeight={800} sx={{ mb: 1 }}>
             A curriculum that compounds
